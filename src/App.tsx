@@ -1,13 +1,17 @@
 import React from 'react';
-import MapScreen from 'screens/MapScreen/MapScreen';
 import LocationPermissionService from 'service/LocationPermissionService';
+import {MapScreen} from 'screens/MapScreen';
+import {ThemeProvider} from 'theme/ThemeProvider';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <>
-      <MapScreen />
-      <LocationPermissionService />
-    </>
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <MapScreen />
+        <LocationPermissionService />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 };
 
