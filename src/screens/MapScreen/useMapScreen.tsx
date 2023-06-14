@@ -28,6 +28,10 @@ export const useMapScreen = () => {
     setUserLocation(coordinate);
   };
 
+  const closeDestinationModal = () => {
+    setModalVisible(false);
+  };
+
   const handleMapSearchBarPress = () => {
     setModalVisible(true);
   };
@@ -40,6 +44,7 @@ export const useMapScreen = () => {
     operations: {
       handleUserLocationChange,
       handleMapSearchBarPress,
+      closeDestinationModal,
     },
   };
 };
